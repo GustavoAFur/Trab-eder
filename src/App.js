@@ -3,6 +3,7 @@ import './App.css';
 import { useState, useRef, useEffect } from 'react';
 import {Timestamp, addDoc, collection, doc, onSnapshot, orderBy, query, serverTimestamp} from 'firebase/firestore'
 import { db } from './firebase-config';
+import enviar from './imgs/send.png'
 
 function App() {
   const[user, setUser] = useState('')
@@ -69,7 +70,8 @@ function App() {
                       {
                       padding: '5px',
                       borderRadius: '5px', 
-                      fontWeight: 'bold'
+                      fontWeight: 'bold',
+                      color: '#A5D1E1',
                       }
                       }>{mesage.nick}: </span>
                   <div className="mensagem" key={mesage.id}>
@@ -79,14 +81,17 @@ function App() {
               )
               }
             </div>
-              <form onSubmit={handleSubmit}>
+              <form className='formulario' onSubmit={handleSubmit}>
               <input 
+              className='campoMensagem'
               type="text"
               placeholder='Mensagem'
               onChange={(e)=>setNewMensage(e.target.value)}
               value={newMensage}
               />
-              <button type='submit' className='enviar '>Enviar</button>
+              <button type='submit' className='enviar '>
+                <img className='imgEnviar' src={enviar} />
+              </button>
             </form>
           </div>
         )}
