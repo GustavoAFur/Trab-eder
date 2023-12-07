@@ -57,6 +57,9 @@
   padding: 10px;
   margin-bottom: 10px;
   scroll-behavior: auto;
+  background-image: url(./imgs/wppjr.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .enviar{
   color: antiquewhite;
