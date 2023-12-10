@@ -55,8 +55,9 @@ function App() {
         {user === '' ? (
           <div className='nome'>
             <div className='nomeInf'>
-              <label>Digite seu Nome:</label>
-              <input type="text" placeholder='Seu Nome:' ref={userName}/>
+              <label className='login'>Entrar</label>
+              <label className='name_form'>Nome</label>
+              <input className='digitarnick' type="text" placeholder='Digite seu nome' ref={userName}/>
               <button className='botao' onClick={()=> setUser(userName.current.value)}>Confirmar</button>
             </div>
           </div>
@@ -71,7 +72,7 @@ function App() {
                       padding: '5px',
                       borderRadius: '5px', 
                       fontWeight: 'bold',
-                      color: '#A5D1E1',
+                      color: 'black',
                       }
                       }>{mesage.nick}: </span>
                   <div className="mensagem" key={mesage.id}>
