@@ -62,7 +62,7 @@ function App() {
           </div>
           ):(
 
-          <div className='chat-app'>     
+          <div className='chat-app'>    
             <div className='contMens' ref={divRef}>
               {messages.map((mesage)=>
                 <div>
@@ -78,22 +78,21 @@ function App() {
                     {mesage.text}
                   </div>
                 </div>
-              )
-              }
+              ) }
             </div>
               <form className='formulario' onSubmit={handleSubmit}>
-              <input 
-              className='campoMensagem'
-              type="text"
-              placeholder='Mensagem'
-              onChange={(e)=>setNewMensage(e.target.value)}
-              value={newMensage}
-              />
-              <button type='submit' className='enviar '>
-                <img className='imgEnviar' src={enviar} />
-              </button>
-            </form>
-          </div>
+                <input 
+                className='campoMensagem'
+                type="text"
+                placeholder='Mensagem'
+                onChange={(e)=>setNewMensage(e.target.value)}
+                value={newMensage}
+                />
+                <button type='submit' className='enviar '>
+                  <img className='imgEnviar' src={enviar} />
+                </button>
+              </form>
+            </div>
         )}
       </div>
     );
